@@ -14,7 +14,7 @@ function App() {
   const indexOfLastUser = page * userPerPage;
   const indexOffFirstUser = indexOfLastUser - userPerPage;
    
-  const currentUsers = data.slice(indexOffFirstUser,indexOfLastUser )
+  const currentUsers = data.slice(indexOffFirstUser,indexOfLastUser);
 
 
 
@@ -22,9 +22,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header/>
-      <Main/>
-      <Button/>
+      <Header from={indexOffFirstUser + 1} to={indexOffFirstUser + currentUsers.length}/>
+     {currentUsers.map((item)=> <Main key={item.id} {...item}/>)}
+      <Button total ={Math.ceil(data.length / userPerPage)} page={page} setPage={setPage} />
     </div>
   );
 }
