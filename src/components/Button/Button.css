@@ -4,10 +4,12 @@
   background-color: rgb(196, 7, 7);
   border-radius: 15px;
   margin-bottom: 20px;
+  border: none;
 }
 .next {
   margin: 10px;
   padding: 8px;
   background-color: rgb(196, 7, 7);
   border-radius: 15px;
+  border: none;
 }
